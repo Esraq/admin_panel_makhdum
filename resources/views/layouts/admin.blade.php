@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free Bootstrap Admin Template : Binary Admin</title>
 	<!-- BOOTSTRAP STYLES-->
-    <link href="backend/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="{{url('backend/assets/css/bootstrap.css')}}" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="backend/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="{{url('backend/assets/css/font-awesome.css')}}" rel="stylesheet" />
      <!-- MORRIS CHART STYLES-->
-    <link href="backend/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <link href="{{url('backend/assets/js/morris/morris-0.4.3.min.css')}}" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="backend/assets/css/custom.css" rel="stylesheet" />
+    <link href="{{url('backend/assets/css/custom.css')}}" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -112,16 +112,16 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="/logout" class="btn
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="backend/assets/js/jquery-1.10.2.js"></script>
+    <script src="{{url('backend/assets/js/jquery-1.10.2.js')}}"></script>
       <!-- BOOTSTRAP SCRIPTS -->
-    <script src="backend/assets/js/bootstrap.min.js"></script>
+    <script src="{{url('backend/assets/js/bootstrap.min.js')}}"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="backend/assets/js/jquery.metisMenu.js"></script>
+    <script src="{{url('backend/assets/js/jquery.metisMenu.js')}}"></script>
      <!-- MORRIS CHART SCRIPTS -->
-     <script src="backend/assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="backend/assets/js/morris/morris.js"></script>
+     <script src="{{url('backend/assets/js/morris/raphael-2.1.0.min.js')}}"></script>
+    <script src="{{url('backend/assets/js/morris/morris.js')}}"></script>
       <!-- CUSTOM SCRIPTS -->
-    <script src="backend/assets/js/custom.js"></script>
+    <script src="{{url('backend/assets/js/custom.js')}}"></script>
     
    
 </body>

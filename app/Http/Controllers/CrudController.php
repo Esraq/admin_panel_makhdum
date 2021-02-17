@@ -93,7 +93,8 @@ class CrudController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cruds =Crud::find($id);
+        return view('crud_edit',compact('cruds','id'));
     }
 
     /**
@@ -105,7 +106,19 @@ class CrudController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $form_data = array(
+            'name'       =>   $request->name,
+            'email'        =>  $request->email,
+            'address'  =>   $request->address,
+
+            'phone'     =>  $request->phone
+        );
+
+        Crud::whereId($id)->update($form_data);
+
+        ///echo "updated";
+
+        return redirect('crud_list')->with('success', true);
     }
 
     /**
@@ -116,6 +129,8 @@ class CrudController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $crud = \App\Models\Crud::find($id);
+        $crud->delete();
+        return redirect('crud_list')->with('success', true);
     }
 }
