@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/home">{{ Auth::user()->name }}</a> 
+                 <a class="navbar-brand" href="/home">     {{ Auth::user()->name }}   </a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;

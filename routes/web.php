@@ -33,5 +33,7 @@ Route::Resource('/authtest','App\Http\Controllers\AuthController');
 Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
 Route::Resource('/crud','App\Http\Controllers\CrudController');
 Route::Resource('/crud_list','App\Http\Controllers\CrudListController');
+Route::Resource('/person','App\Http\Controllers\PersonController');
+Route::Resource('/person_list','App\Http\Controllers\PersonListController');
 
 });
