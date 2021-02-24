@@ -1,0 +1,41 @@
+<table id="table" class="table table-striped">
+<thead>
+<tr>
+
+
+
+
+<th><center><b>Name</b></center></th>
+
+<th><center><b>Email</b></center></th>
+
+<th><center><b>Phone</b></center></th>
+
+
+<th><center><b>Address</b></center></th>
+
+
+
+
+</tr>
+
+<tr>
+
+
+
+
+<td><center>Eisty</center></td>
+<td><center>fuadhasanfahim.rko@gmail.com</center></td>
+<td><center>+8801770137655</center></td>
+<td><center>5-9 Roslyn Street, 2011 Potts Point (NSW)</center></td>
+
+
+
+
+
+
+
+<!-- Modal content -->
+
+</tr>
+</thead></table>

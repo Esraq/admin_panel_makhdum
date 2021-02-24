@@ -18,7 +18,7 @@
 <tr>
 
 
-
+<th><center>photo</center></th>
 <th><center>Name</center></th>
 <th><center>Age</center></th>
 <th><center>Email</center></th>
@@ -33,14 +33,14 @@
 <tr>
 
 
-
+<td><center><img src="public/images/{{$person->filename}}" height="67" width="60"></center></td>
 <td><center>{{$person->name}}</center></td>
 <td><center>{{$person->email}}</center></td>
 <td><center>{{$person->phone}}</center></td>
 <td><center>{{$person->address}}</center></td>
 
 
-<td>{!! Form::open(['url' => URL::to('/person/'.$person->id),"method"=>"DELETE"]) !!}
+<td>{!! Form::open(['url' => URL::to('/person/'.$person->id),"method"=>"DELETE"]) !!} 
     <button type="submit" class="btn btn-xs btn-danger"><i class="fa  fa-trash-o"></i></button>
     {!! Form::close() !!}</td>
 <td>

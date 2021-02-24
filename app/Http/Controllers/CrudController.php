@@ -119,7 +119,7 @@ class CrudController extends Controller
         ///echo "updated";
 
         return redirect('crud_list')->with('success', true);
-    }
+    } 
 
     /**
      * Remove the specified resource from storage.

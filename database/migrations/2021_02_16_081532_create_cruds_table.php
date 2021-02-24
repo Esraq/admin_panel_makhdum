@@ -19,6 +19,7 @@ class CreateCrudsTable extends Migration
             $table->string('email');
             $table->integer('phone');
             $table->string('address');
+            $table->string('filename');
             $table->timestamps();
         });
     }

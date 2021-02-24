@@ -50,6 +50,16 @@ class PersonController extends Controller
             'phone' => 'required|min:11',
              ]);
 
+
+             if($request->hasfile('photo'))
+             {
+                 $file = $request->file('photo');
+                 $name=time().$file->getClientOriginalName();
+                 $file->move(public_path().'/public/images/', $name);
+             }
+
+             
+
         $person=new Person;
         $person->name=$request->get('name');
         $person->age=$request->get('age');
@@ -59,10 +69,14 @@ class PersonController extends Controller
 
         $person->address=$request->get('address');
 
+        $person->filename=$name;
+
         $person->save();
 
         return redirect('person_list')->with('success', true);
         
+
+    
     }
 
     /**
@@ -84,7 +98,8 @@ class PersonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $person =Person::find($id);
+        return view('person_edit',compact('person','id'));
     }
 
     /**
@@ -96,7 +111,19 @@ class PersonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $form_data = array(
+            'name'       =>   $request->name,
+            'email'        =>  $request->email,
+            'address'  =>   $request->address,
+            'age'=>$request->age,
+            'phone'     =>  $request->phone
+        );
+
+        Person::whereId($id)->update($form_data);
+
+        ///echo "updated";
+
+        return redirect('person_list')->with('success', true);
     }
 
     /**
@@ -107,6 +134,8 @@ class PersonController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $person = \App\Models\Person::find($id);
+        $person->delete();
+        return redirect('/person_list')->with('success', true);
     }
 }
